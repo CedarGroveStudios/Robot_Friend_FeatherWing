@@ -11,7 +11,7 @@
 
   (page USLetter)
   (title_block
-    (title Cricket_Feather_Flip)
+    (title Robot_Friend_FeatherWing)
     (date 2019-11-08)
     (rev v01)
     (company "Cedar Grove Studios")
@@ -1478,7 +1478,7 @@
   (gr_line (start 93.98 51.816) (end 93.98 70.231) (layer F.SilkS) (width 0.3) (tstamp 5DC63848))
   (gr_line (start 93.98 104.902) (end 93.98 123.317) (layer F.SilkS) (width 0.3) (tstamp 5DC63845))
   (gr_line (start 91.44 104.902) (end 91.44 123.317) (layer F.SilkS) (width 0.3))
-  (gr_text "GND\n3V3\n~RST\n3V3\nAREF\nGND\n~A0\n~A1\nA2\nA3\nA4\nA5\nSCK\nMO\nMI\nRX\nTX\nD4" (at 113.2 104.67 90) (layer F.SilkS) (tstamp 5DC6351B)
+  (gr_text "GND\n3V3\n~RST\n3V3\nAREF\nGND\n~~A0\n~~A1\nA2\nA3\nA4\nA5\nSCK\nMO\nMI\nRX\nTX\nD4" (at 113.2 104.67 90) (layer F.SilkS) (tstamp 5DC6351B)
     (effects (font (size 1.6 0.8) (thickness 0.15)) (justify left))
   )
   (gr_text "GND\n3V3\n~RST\n3V3\nGND\nGND\nBAT\nEN\nUSB\nD13\nD12\nD11\nD10\nD9\nD6\nD5\nSCL\nSDA" (at 113.11 70.32 90) (layer F.SilkS)

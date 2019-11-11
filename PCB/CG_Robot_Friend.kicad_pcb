@@ -11,7 +11,7 @@
 
   (page USLetter)
   (title_block
-    (title Cricket_Feather_Flip)
+    (title Robot_Friend_FeatherWing)
     (date 2019-11-08)
     (rev v01)
     (company "Cedar Grove Studios")
@@ -93,7 +93,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory Cricket_Feather_Flip_gerbers/))
+      (outputdirectory CG_Robot_Friend_gerbers/))
   )
 
   (net 0 "")

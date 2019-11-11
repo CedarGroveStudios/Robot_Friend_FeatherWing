@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:Cricket_Feather_Flip-cache
+LIBS:CG_Robot_Friend-cache
 EELAYER 26 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "Cricket_Feather_Flip"
-Date "2019-11-07"
-Rev "v00"
+Title "Robot_Friend_FeatherWing"
+Date "2019-11-08"
+Rev "v01"
 Comp "Cedar Grove Studios"
 Comment1 ""
 Comment2 ""

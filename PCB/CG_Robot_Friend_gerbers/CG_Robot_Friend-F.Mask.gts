@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,(5.0.0-rc2-dev-444-g2974a2c10)*
-G04 #@! TF.CreationDate,2019-11-08T21:54:57-08:00*
-G04 #@! TF.ProjectId,Cricket_Feather_Flip,437269636B65745F466561746865725F,v01*
+G04 #@! TF.CreationDate,2019-11-11T00:06:31-08:00*
+G04 #@! TF.ProjectId,CG_Robot_Friend,43475F526F626F745F467269656E642E,v01*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW (5.0.0-rc2-dev-444-g2974a2c10)) date 11/08/19 21:54:57*
+G04 Created by KiCad (PCBNEW (5.0.0-rc2-dev-444-g2974a2c10)) date 11/11/19 00:06:31*
 %MOMM*%
 %LPD*%
 G01*
