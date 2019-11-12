@@ -10,6 +10,8 @@ The Cedar Grove Robot Friend includes a prototype area and a breakout of all Fea
 
 For use ONLY with the Crickit FeatherWing and compatible Feather MCU boards. To date, it has only been tested with the PyGamer and PyBadge. Double-check pin compatibility if you plan to attach or stack other Feather devices.
 
+Caution: The Crickit FeatherWing is capable of providing up to 150mA of 3.3-volt power to the attached PyBadge/PyGamer Feather. In normal operation without any of the NeoPixels lighted, the PyBadge/PyGamer will draw about 60mA from the Crickit's internal 3.3-volt regulator. If you need to brightly light the PyBadge/PyGamer NeoPixels, consider adding a small LiPo battery directly to the PyBadge/PyGamer or just use the Crickit's internal NeoPixel (seesaw pin #27).
+
 OSH Park project: https://oshpark.com/shared_projects/gHX0LDKm
 
 ![Image of Module](https://github.com/CedarGroveStudios/Robot_Friend_FeatherWing/blob/master/photos%20and%20graphics/Robot_Friend_glam_wide.png)
