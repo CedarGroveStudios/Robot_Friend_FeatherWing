@@ -10,7 +10,7 @@ The Cedar Grove Robot Friend includes a prototype area and a breakout of all Fea
 
 For use ONLY with the Crickit FeatherWing and compatible Feather MCU boards. To date, it has only been tested with the PyGamer and PyBadge. Double-check pin compatibility if you plan to attach or stack other Feather devices.
 
-OSH Park project: https://oshpark.com/shared_projects/uFrVGxL9
+OSH Park project: https://oshpark.com/shared_projects/gHX0LDKm
 
 ![Image of Module](https://github.com/CedarGroveStudios/Robot_Friend_FeatherWing/blob/master/photos%20and%20graphics/CG_Robot_Friend_GLAM_seated_wide.png)
 
