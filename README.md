@@ -1,10 +1,10 @@
 # Cedar Grove Robot Friend FeatherWing
 
-### _A passive FeatherWing adapter for stacking an Adafruit PyBadge or PyGamer with a Crickit FeatherWing. Includes a prototyping area for custom circuitry and sensors._
+### _A passive FeatherWing adapter for stacking an Adafruit PyBadge or PyGamer onto a Crickit FeatherWing. Includes a prototyping area for custom circuitry and sensors._
 
 ![Image of Module](https://github.com/CedarGroveStudios/Robot_Friend_FeatherWing/blob/master/photos%20and%20graphics/Robot_Friend_expl_wide.png)
 
-Perched on the top of a robot chassis, the Cedar Grove Robot Friend FeatherWing passively connects the FeatherWing connections of a PyBadge or PyGamer device with a Crickit FeatherWing. The Crickit provides 3.3V power to the attached PyBadge or PyGamer. All Feather signals are interconnected to accommodate custom alterations to the Crickit module, such as support for IRQ/Busy or sensor modifications.
+Perched on the top of a robot chassis, the Cedar Grove Robot Friend FeatherWing passively connects the FeatherWing connections of a PyBadge or PyGamer device with a Crickit FeatherWing. The Crickit provides 3.3V power to the attached PyBadge/PyGamer. All Feather signals are interconnected to accommodate custom alterations to the Crickit module, such as support for IRQ/Busy or sensor modifications.
 
 The Cedar Grove Robot Friend includes a prototype area and a breakout of all Feather pins for further cusomization.
 
