@@ -12,7 +12,7 @@ For use ONLY with the Crickit FeatherWing and compatible Feather MCU boards. To 
 
 Caution: The Crickit FeatherWing is capable of providing up to 150mA of 3.3-volt power to the attached PyBadge/PyGamer Feather. In normal operation without any of the NeoPixels lighted, the PyBadge/PyGamer will draw about 60mA from the Crickit's internal 3.3-volt regulator. If you need to brightly light the PyBadge/PyGamer NeoPixels, consider adding a small LiPo battery directly to the PyBadge/PyGamer or just use the Crickit's internal NeoPixel (seesaw pin #27).
 
-OSH Park project: <a href="https://oshpark.com/shared_projects/hbRmn7jr"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
+OSH Park project: <a href="https://oshpark.com/shared_projects/N1lNaemv"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
 ![Image of Module](https://github.com/CedarGroveStudios/Robot_Friend_FeatherWing/blob/master/photos%20and%20graphics/Robot_Friend_glam_wide.png)
 
