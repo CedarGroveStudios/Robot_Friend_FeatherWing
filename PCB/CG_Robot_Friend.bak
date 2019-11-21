@@ -6,8 +6,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Robot_Friend_FeatherWing"
-Date "2019-11-11"
-Rev "v02"
+Date "2019-11-20"
+Rev "v03"
 Comp "Cedar Grove Studios"
 Comment1 ""
 Comment2 ""
@@ -496,21 +496,21 @@ F 3 "" H 6150 2375 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6350 1625 6750 1625
-Text Label 6700 1700 2    50   ~ 0
+Text Label 6750 1625 2    50   ~ 0
 3V3
-Text Label 6700 1600 2    50   ~ 0
+Text Label 6750 1525 2    50   ~ 0
 GND
 Wire Wire Line
 	6350 1525 6750 1525
 $Comp
-L conn:CONN_01X09 J10
+L conn:CONN_01X08 J10
 U 1 1 5DCD5878
-P 7300 1925
-F 0 "J10" H 7450 2075 50  0000 C CNN
-F 1 "PROTO" H 7500 1975 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x09_Pitch2.54mm_nosilk" H 7300 1925 50  0001 C CNN
-F 3 "" H 7300 1925 50  0001 C CNN
-	1    7300 1925
+P 7300 1875
+F 0 "J10" H 7450 2025 50  0000 C CNN
+F 1 "PROTO" H 7500 1925 50  0000 C CNN
+F 2 "Adafruit:Pin_Header_Straight_1x08_Pitch2.54mm_nosilk" H 7300 1875 50  0001 C CNN
+F 3 "" H 7300 1875 50  0001 C CNN
+	1    7300 1875
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -594,14 +594,14 @@ Wire Wire Line
 Wire Wire Line
 	3175 5525 3575 5525
 $Comp
-L conn:CONN_01X09 J11
+L conn:CONN_01X08 J11
 U 1 1 5DC90487
-P 8025 1925
-F 0 "J11" H 8175 2075 50  0000 C CNN
-F 1 "PROTO" H 8225 1975 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x09_Pitch2.54mm_nosilk" H 8025 1925 50  0001 C CNN
-F 3 "" H 8025 1925 50  0001 C CNN
-	1    8025 1925
+P 8025 1875
+F 0 "J11" H 8175 2025 50  0000 C CNN
+F 1 "PROTO" H 8225 1925 50  0000 C CNN
+F 2 "Adafruit:Pin_Header_Straight_1x08_Pitch2.54mm_nosilk" H 8025 1875 50  0001 C CNN
+F 3 "" H 8025 1875 50  0001 C CNN
+	1    8025 1875
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -613,14 +613,14 @@ GND
 Wire Wire Line
 	8225 1525 8625 1525
 $Comp
-L conn:CONN_01X09 J12
+L conn:CONN_01X08 J12
 U 1 1 5DC90491
-P 8750 1925
-F 0 "J12" H 8900 2075 50  0000 C CNN
-F 1 "PROTO" H 8950 1975 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x09_Pitch2.54mm_nosilk" H 8750 1925 50  0001 C CNN
-F 3 "" H 8750 1925 50  0001 C CNN
-	1    8750 1925
+P 8750 1875
+F 0 "J12" H 8900 2025 50  0000 C CNN
+F 1 "PROTO" H 8950 1925 50  0000 C CNN
+F 2 "Adafruit:Pin_Header_Straight_1x08_Pitch2.54mm_nosilk" H 8750 1875 50  0001 C CNN
+F 3 "" H 8750 1875 50  0001 C CNN
+	1    8750 1875
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -647,37 +647,4 @@ Wire Notes Line
 	1325 975  1325 3600
 Text Notes 5200 1250 0    50   ~ 0
 Prototyping Area
-$Comp
-L conn:CONN_01X03 J?
-U 1 1 5DCC6D06
-P 7300 3125
-F 0 "J?" H 7450 3275 50  0000 C CNN
-F 1 "PROTO" H 7500 3175 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x03_Pitch2.54mm_no_silk" H 7300 3125 50  0001 C CNN
-F 3 "" H 7300 3125 50  0001 C CNN
-	1    7300 3125
-	-1   0    0    -1  
-$EndComp
-$Comp
-L conn:CONN_01X03 J?
-U 1 1 5DCC6E29
-P 8025 3125
-F 0 "J?" H 8175 3275 50  0000 C CNN
-F 1 "PROTO" H 8225 3175 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x03_Pitch2.54mm_no_silk" H 8025 3125 50  0001 C CNN
-F 3 "" H 8025 3125 50  0001 C CNN
-	1    8025 3125
-	-1   0    0    -1  
-$EndComp
-$Comp
-L conn:CONN_01X03 J?
-U 1 1 5DCCDC6A
-P 8750 3125
-F 0 "J?" H 8900 3275 50  0000 C CNN
-F 1 "PROTO" H 8950 3175 50  0000 C CNN
-F 2 "Adafruit:Pin_Header_Straight_1x03_Pitch2.54mm_no_silk" H 8750 3125 50  0001 C CNN
-F 3 "" H 8750 3125 50  0001 C CNN
-	1    8750 3125
-	-1   0    0    -1  
-$EndComp
 $EndSCHEMATC
