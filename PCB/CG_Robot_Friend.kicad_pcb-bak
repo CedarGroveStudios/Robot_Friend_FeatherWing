@@ -343,7 +343,7 @@
     (pad 28 thru_hole circle (at 19.05 -12.7) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 3 /SDA))
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Adafruit_CAD_Parts-master/3093 Crickit CPX/3093 Crickit CPX.step"
-      (offset (xyz 1 0 -12))
+      (offset (xyz 1 0 -44))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -1435,6 +1435,7 @@
     )
   )
 
+  (gr_poly (pts (xy 142.875 124.206) (xy 124.079 108.585) (xy 130.302 108.585) (xy 137.668 114.681) (xy 137.541 114.681) (xy 142.875 120.396)) (layer F.SilkS) (width 0.15))
   (gr_line (start 139.954 61.4426) (end 142.748 58.674) (layer Edge.Cuts) (width 0.1) (tstamp 5DC9DBB0))
   (gr_text "GND\n3V3" (at 92.837 104.648 90) (layer B.SilkS) (tstamp 5DD629D8)
     (effects (font (size 1.6 0.8) (thickness 0.15)) (justify right mirror))
@@ -10287,7 +10288,6 @@
   (gr_arc (start 139.7 66.5734) (end 143.256 66.5734) (angle -35.31120522) (layer Edge.Cuts) (width 0.1) (tstamp 5DC9DBAC))
   (gr_arc (start 141.986 57.658) (end 142.748 58.674) (angle -53.13010235) (layer Edge.Cuts) (width 0.1) (tstamp 5DC9DBAB))
   (gr_line (start 143.256 128.397) (end 143.256 120.65) (layer Edge.Cuts) (width 0.1) (tstamp 5DC9D8C9))
-  (gr_poly (pts (xy 137.795 119.38) (xy 125.095 108.585) (xy 131.445 108.585) (xy 137.795 113.665)) (layer F.SilkS) (width 0.15))
   (gr_poly (pts (xy 142.875 128.397) (xy 142.494 129.413) (xy 141.605 129.921) (xy 133.604 129.921) (xy 109.22 108.585) (xy 122.555 108.585) (xy 142.875 125.476)) (layer F.SilkS) (width 0.15))
   (gr_line (start 138.049 114.681) (end 143.129 120.142) (layer Edge.Cuts) (width 0.1))
   (gr_arc (start 139.746362 108.331) (end 141.732 111.252) (angle -49.59725479) (layer Edge.Cuts) (width 0.1) (tstamp 5DC9D6CE))
