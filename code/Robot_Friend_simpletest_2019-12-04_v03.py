@@ -13,10 +13,10 @@ crickit.onboard_pixel[0] = ((255, 24, 255))
 
 # establish PyBadger instance
 from adafruit_pybadger import PyBadger
-pybadger = PyBadger()
+pybadger = PyBadger(pixels_brightness=0.01)
 
 # intialize PyBadge
-pybadger.pixels.fill((1, 0, 1))  # dim red neopixels
+pybadger.pixels.fill((255, 24, 255))  # dim red neopixels
 pybadger.brightness = 0.9  # set initial display brightness
 pybadger.show_badge(name_string="RobotFriend", hello_scale=2, my_name_is_scale=1, name_scale=2)
 time.sleep(3)
@@ -51,9 +51,9 @@ while True:
     print(pybadger.button)
     print((pybadger.light/35536, pybadger.acceleration[0] / 10, pybadger.acceleration[1] / 10, pybadger.acceleration[2] / 10))
 
-    pybadger.pixels[int(t2) % 5] = [rand.randint(0, 4), rand.randint(0, 4), rand.randint(0, 4)]
+    pybadger.pixels[int(t2) % 5] = [rand.randint(64, 255), rand.randint(64, 255), rand.randint(64, 255)]
     crickit.onboard_pixel[0] = [rand.randint(64, 255), rand.randint(64, 255), rand.randint(64, 255)]
 
-    pybadger.auto_dim_display(delay=10, movement_threshold=1)
+    pybadger.auto_dim_display(delay=20, movement_threshold=1)
 
     time.sleep(0.25)
