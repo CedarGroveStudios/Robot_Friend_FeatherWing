@@ -41,7 +41,8 @@ while True:
             pybadger.show_badge(name_string="RobotFriend", hello_scale=2, my_name_is_scale=1, name_scale=2)
         else:
             pybadger.show_terminal()
-        time.sleep(0.5)  # allow button to release
+        while pybadger.button.select:
+            time.sleep(0.1)  # allow button to release
         select_state = not(select_state)
 
     pybadger.pixels.fill([0, 0, 0])
