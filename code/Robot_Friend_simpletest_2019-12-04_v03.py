@@ -16,7 +16,7 @@ from adafruit_pybadger import PyBadger
 pybadger = PyBadger()
 
 # intialize PyBadge
-pybadger.pixels.fill([1, 0, 0])  # dim red neopixels
+pybadger.pixels.fill((1, 0, 1))  # dim red neopixels
 pybadger.brightness = 0.9  # set initial display brightness
 pybadger.show_badge(name_string="RobotFriend", hello_scale=2, my_name_is_scale=1, name_scale=2)
 time.sleep(3)
@@ -31,8 +31,18 @@ t1 = time.time()
 print("Robot_Friend_simpletest_2019-12-04_v03.py")
 print("-----------------------------------------")
 
+select_state = False
+
 while True:
     t2 = time.monotonic()
+
+    if pybadger.button.select:
+        if select_state:
+            pybadger.show_badge(name_string="RobotFriend", hello_scale=2, my_name_is_scale=1, name_scale=2)
+        else:
+            pybadger.show_terminal()
+        time.sleep(0.5)  # allow button to release
+        select_state = not(select_state)
 
     pybadger.pixels.fill([0, 0, 0])
     print(t2, pybadger.light, pybadger.acceleration)
