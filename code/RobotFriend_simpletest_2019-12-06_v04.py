@@ -51,10 +51,10 @@ while True:
     # print(pybadger.joystick)  # if PyGamer
     # print(pybadger.button)  # to show state of buttons
     print("----------")
-    print("T:%6.0f, L:%1.1f" % (t2, pybadger.light/35536))
+    print("T:%6.0f, L:%1.1f" % (t2, pybadger.light/65536))
     print("X:%2.1f, Y:%2.1f, Z:%2.1f" % (pybadger.acceleration[0], pybadger.acceleration[1], pybadger.acceleration[2]))
-    # for plotter
-    # print((pybadger.light/35536, pybadger.acceleration[0] / 10, pybadger.acceleration[1] / 10, pybadger.acceleration[2] / 10))
+    # scale and format for plotter
+    print((pybadger.light/65536, pybadger.acceleration[0] / 10, pybadger.acceleration[1] / 10, pybadger.acceleration[2] / 10))
 
     pybadger.pixels[int(t2) % 5] = [rand.randint(64, 255), rand.randint(64, 255), rand.randint(64, 255)]
     crickit.onboard_pixel[0] = [rand.randint(64, 255), rand.randint(64, 255), rand.randint(64, 255)]
