@@ -98,20 +98,36 @@ if turtle_t:
 
     time.sleep(1)
 
+sound_t = True  # wave file to speaker test
+if sound_t:
+    pybadger.play_tone(440, 0.25)
+    time.sleep(0.25)
+    pybadger.play_file("rimshot.wav")
+
 # turn off motors
 crickit.dc_motor_1.throttle = 0.0
 crickit.dc_motor_2.throttle = 0.0
 
 motor_t = True  # DC motor test
 if motor_t:
-    crickit.dc_motor_1.throttle = 1.0
-    crickit.dc_motor_2.throttle = 1.0
+    vel = 1.0
+    crickit.dc_motor_1.throttle = vel
+    crickit.dc_motor_2.throttle = vel
     time.sleep(0.5)
-    crickit.dc_motor_1.throttle = -1.0
-    crickit.dc_motor_2.throttle = -1.0
+    crickit.dc_motor_1.throttle = -1 * vel
+    crickit.dc_motor_2.throttle = -1 * vel
     time.sleep(0.5)
     crickit.dc_motor_1.throttle = 0.0
     crickit.dc_motor_2.throttle = 0.0
+    time.sleep(0.5)
+
+servo_t = True  # test of Servo 1
+if servo_t:
+    crickit.servo_1.angle = 90
+    time.sleep(0.5)
+    crickit.servo_1.angle = 0
+    time.sleep(0.5)
+    crickit.servo_1.angle = 180
     time.sleep(0.5)
 
 print("RobotFriend_simpletest_2019-12-08_v06.py")
