@@ -5,6 +5,17 @@ import board
 import time
 import random as rand
 
+i2c = board.I2C()
+
+dac_t = True  # test Stemma-connected 12-bit DAC
+if dac_t:
+    import adafruit_mcp4725
+    dac = adafruit_mcp4725.MCP4725(i2c)
+    try:
+        dac.normalized_value = 0.5  # 1.65v output
+    except:
+        print("12-bit DAC not connected (MCP4725)")
+
 crickit_t = True  # Crickit library test
 if crickit_t:
     # establish Crickit instance
