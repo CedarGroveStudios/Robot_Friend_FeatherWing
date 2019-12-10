@@ -11,11 +11,11 @@ The Cedar Grove Robot Friend includes a prototype area and a breakout of all Fea
 For use ONLY with the Crickit FeatherWing and compatible Feather MCU boards. To date, it has only been tested with the PyGamer and PyBadge. Double-check pin compatibility if you plan to attach or stack other Feather devices.
 
 #### Caution:
-The Crickit is capable of providing up to 150mA of 3.3-volt power to the attached PB/PG Feather. In normal operation without any of the NeoPixels lighted, the PB/PG will draw about 60mA from the Crickit's internal 3.3-volt regulator. 
+The Crickit is capable of providing up to 150mA of 3.3-volt power to the attached PB/PG Feather. In normal operation without any of the NeoPixels lighted or the use of the built-in speaker amplifier, the PB/PG will draw about 60mA from the Crickit's internal 3.3-volt regulator. 
 
 When the PB/PG is powered only by the Crickit via the Feather 3V pin, the PB/PG 3.3v regulator is reverse-biased by the Crickit-supplied +3.3 volts. The AP2112-3.3 regulator has an intrinsic MOSFET diode between its output and input that conducts when reverse-biased, raising the voltage of the input pin to the same as the output pin less the forward voltage drop of the diode. What that means is that 5-volt components like the PB/PG's NeoPixels and Stemma connectors will have approximately +3.2 volts available for operation. The PB/PG NeoPixels seem to work with the lower voltage, but might not be 100% reliable. 
 
-Since the reverse-biased "feature" of the PB/PG's internal regulator is not documented in the datasheet, it's probably a good idea to limit use of the PB/PG NeoPixels when stacked on the Crickit via the Robot Friend FeatherWing. If you need to brightly light the PB/PG NeoPixels, consider adding a small LiPo battery directly to the PB/PG or just use the Crickit's internal NeoPixel or drive a string via the Crickit's external NeoPixel connector.
+Since the reverse-biased "feature" of the PB/PG's internal regulator is not documented in the datasheet, it's probably a good idea to limit use of the PB/PG NeoPixels when stacked on the Crickit via the Robot Friend FeatherWing. If you need to brightly light the PB/PG NeoPixels or connect a speaker to the on-board amplifier, consider adding a small LiPo battery directly to the PB/PG or just use the Crickit's on-board NeoPixel or drive a string via the Crickit's external NeoPixel connector. If a louder speaker is needed, use the Crickit's speaker output since the Crickit amplifier is not connected to the 3.3-volt power supply.
 
 Intrinsic MOSFET Diode Discussion: https://www.digikey.com/en/articles/techzone/2016/sep/the-significance-of-the-intrinsic-body-diodes-inside-mosfets
 
