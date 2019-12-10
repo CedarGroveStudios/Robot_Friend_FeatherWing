@@ -7,6 +7,8 @@ import random as rand
 
 i2c = board.I2C()
 
+test_delay = 0.5  # seconds between tests
+
 dac_t = True  # test Stemma-connected 12-bit DAC
 if dac_t:
     import adafruit_mcp4725
@@ -38,7 +40,7 @@ if pybadger_t:
     pybadger.pixels.fill((255, 24, 255))  # dim red neopixels
     pybadger.brightness = 0.9  # set initial display brightness
     pybadger.show_badge(name_string="RobotFriend", hello_scale=2, my_name_is_scale=1, name_scale=2)
-    time.sleep(2)
+    time.sleep(test_delay)
     pybadger.show_terminal()
 
 text_t = True  # text display test
@@ -62,7 +64,7 @@ if text_t:
 
     # Show it
     display.show(text_area)
-    time.sleep(2)
+    time.sleep(test_delay)
 
 bitmap_t = True  # bitmap graphics file test
 if bitmap_t:
@@ -82,7 +84,7 @@ if bitmap_t:
         # Add the Group to the Display
         display.show(group)
         display.wait_for_frame()
-        time.sleep(1)
+        time.sleep(test_delay)
 
 turtle_t = True  # Turtle graphics test
 if turtle_t:
@@ -103,17 +105,18 @@ if turtle_t:
     turtle = turtle(board.DISPLAY)
     turtle.penup()
 
-    turtle.goto(-60, -60)
+    turtle.goto(-45, -45)
     turtle.pendown()
-    hilbert2(4, "a", 90, 5, turtle)
+    hilbert2(6, "a", 90, 4, turtle)
 
-    time.sleep(1)
+    time.sleep(test_delay)
 
 sound_t = True  # wave file to speaker test
 if sound_t:
     pybadger.play_tone(440, 0.25)
     time.sleep(0.25)
     pybadger.play_file("rimshot.wav")
+    time.sleep(test_delay)
 
 # turn off motors
 crickit.dc_motor_1.throttle = 0.0
@@ -124,22 +127,22 @@ if motor_t:
     vel = 1.0
     crickit.dc_motor_1.throttle = vel
     crickit.dc_motor_2.throttle = vel
-    time.sleep(0.5)
+    time.sleep(test_delay)
     crickit.dc_motor_1.throttle = -1 * vel
     crickit.dc_motor_2.throttle = -1 * vel
-    time.sleep(0.5)
+    time.sleep(test_delay)
     crickit.dc_motor_1.throttle = 0.0
     crickit.dc_motor_2.throttle = 0.0
-    time.sleep(0.5)
+    time.sleep(test_delay)
 
 servo_t = True  # test of Servo 1
 if servo_t:
     crickit.servo_1.angle = 90
-    time.sleep(0.5)
+    time.sleep(test_delay)
     crickit.servo_1.angle = 0
-    time.sleep(0.5)
+    time.sleep(test_delay)
     crickit.servo_1.angle = 180
-    time.sleep(0.5)
+    time.sleep(test_delay)
 
 print("RobotFriend_simpletest_2019-12-08_v06.py")
 print("----------------------------------------")
@@ -174,4 +177,4 @@ while True:
 
     pybadger.auto_dim_display(delay=20, movement_threshold=1)
 
-    time.sleep(0.5)
+    time.sleep(test_delay)
