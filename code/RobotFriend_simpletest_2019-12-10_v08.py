@@ -1,21 +1,10 @@
-# RobotFriend_simpletest_2019-12-09_v07.py
+# RobotFriend_simpletest_2019-12-10_v08.py
 # uses revised adafruit_pybadger and adafruit_crickit
 # uses cedargrove_pypanel to abstract Crickit and PyBadge/PyGamer
 
 import time
 import random as rand
-
-import cedargrove_pypanel as pypanel
-# panel function alias list
-crickit    = pypanel.crickit
-panel      = pypanel.pybadger
-stemma_dac = pypanel.dac
-terminalio = pypanel.terminalio
-label      = pypanel.label
-displayio  = pypanel.displayio
-display    = pypanel.display
-turtle     = pypanel.turtle
-board      = pypanel.board
+from cedargrove_pypanel import *
 
 test_delay = 0.25  # seconds between tests
 
@@ -89,18 +78,16 @@ hilbert2(6, "a", 90, 4, turtle)
 
 time.sleep(test_delay)
 
-sound_t = True  # wave file to speaker test
-if sound_t:
-    panel.play_tone(440, 0.25)
-    time.sleep(0.25)
-    panel.play_file("rimshot.wav")
-    time.sleep(test_delay)
+# Wave file to speaker test
+panel.play_tone(440, 0.25)
+time.sleep(0.25)
+panel.play_file("rimshot.wav")
+time.sleep(test_delay)
 
+# DC motor test
 # turn off motors
 crickit.dc_motor_1.throttle = 0.0
 crickit.dc_motor_2.throttle = 0.0
-
-# DC motor test
 vel = 1.0
 crickit.dc_motor_1.throttle = vel
 crickit.dc_motor_2.throttle = vel
@@ -120,7 +107,7 @@ time.sleep(test_delay)
 crickit.servo_1.angle = 180
 time.sleep(test_delay)
 
-print("RobotFriend_simpletest_2019-12-09_v07.py")
+print("RobotFriend_simpletest_2019-12-10_v08.py")
 print("----------------------------------------")
 
 t1 = time.time()

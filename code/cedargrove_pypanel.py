@@ -1,5 +1,5 @@
 # cedargrove_pypanel.py
-# Cedar Grove Studios 2019-12-09 v00
+# Cedar Grove Studios 2019-12-09-10 v00
 # uses revised adafruit_pybadger and adafruit_crickit
 
 import board
@@ -7,7 +7,7 @@ i2c = board.I2C()  # establish i2C instance for Stemma devices
 
 # Stemma-connected devices section
 import adafruit_mcp4725  # example for Stemma-attached 12-bit DAC
-dac = adafruit_mcp4725.MCP4725(i2c)
+stemma_dac = adafruit_mcp4725.MCP4725(i2c)
 
 # establish Crickit instance
 from adafruit_crickit import crickit
@@ -16,7 +16,7 @@ crickit.onboard_pixel.brightness = 0.01
 
 # establish PyBadger instance
 from adafruit_pybadger import PyBadger
-pybadger = PyBadger(pixels_brightness=0.01)
+panel = PyBadger(pixels_brightness=0.01)
 
 # establish terminalio text display instance
 import terminalio
