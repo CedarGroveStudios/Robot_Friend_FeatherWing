@@ -5,9 +5,22 @@
 import board
 i2c = board.I2C()  # establish i2C instance for Stemma devices
 
-# Stemma-connected devices section
-import adafruit_mcp4725  # example for Stemma-attached 12-bit DAC
-stemma_dac = adafruit_mcp4725.MCP4725(i2c)
+# Enumerate Stemma-connected devices
+stemma = []  # clear the list
+
+import adafruit_mcp4725  # Stemma-attached 12-bit DAC
+try:  # test to confirm the module is attached to Stemma
+    mcp4725 = adafruit_mcp4725.MCP4725(i2c)
+    mcp4725.normalized_value = 0.0  # set DAC output to see if attached
+    stemma.append(("mcp4725", mcp4725, "12-bit DAC"))
+except: pass
+
+import adafruit_ssd1306  # Stemma-attached oled
+try:  # test to confirm the module is attached to Stemma
+    ssd1306 = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
+    ssd1306.fill(0)
+    stemma.append(("ssd1306", ssd1306, "128x32 OLED"))
+except: pass
 
 # establish Crickit instance
 from adafruit_crickit import crickit
@@ -17,6 +30,10 @@ crickit.onboard_pixel.brightness = 0.01
 # establish PyBadger instance
 from adafruit_pybadger import PyBadger
 panel = PyBadger(pixels_brightness=0.01)
+
+if hasattr(board, "JOYSTICK_X"):
+    panel.has_joystick = True
+else: panel.has_joystick = False
 
 # establish terminalio text display instance
 import terminalio

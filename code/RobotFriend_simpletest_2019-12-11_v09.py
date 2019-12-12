@@ -1,4 +1,4 @@
-# RobotFriend_simpletest_2019-12-10_v08.py
+# RobotFriend_simpletest_2019-12-11_v09.py
 # uses revised adafruit_pybadger and adafruit_crickit
 # uses cedargrove_pypanel to abstract Crickit and PyBadge/PyGamer
 
@@ -6,20 +6,27 @@ import time
 import random as rand
 from cedargrove_pypanel import *
 
-if hasattr(board, "JOYSTICK_X"):
-    print("Joystick found")  # if PyGamer
-    has_joystick = True
-else:
-    print("No joystick")
-    has_joystick = False
+if panel.has_joystick: print("Joystick found")  # if PyGamer
+else: print("No joystick")
 
 test_delay = 0.25  # seconds between tests
 
+print(" ")
+print("Stemma devices:")
+for i in range(0, len(stemma)):
+    print(stemma[i][0], stemma[i][2])
+if len(stemma) == 0: print("--none--")
+print(" ")
+time.sleep(2)
+
 try:
-    stemma_dac.normalized_value = 0.0  # set DAC output to see if attached
-    print("12-bit Stemma DAC --connected--")
-except:
-    print("12-bit Stemma DAC not connected (MCP4725)")
+    mcp4725.normalized_value = 0.5  # set DAC output to mid-scale
+except: pass
+
+try:
+    ssd1306.text("RobotFriend", 0, 8, 1)
+    ssd1306.show()
+except: pass
 
 # set Crickit on-board NeoPixel to purple
 crickit.onboard_pixel[0] = (255, 24, 255)
@@ -114,7 +121,7 @@ time.sleep(test_delay)
 crickit.servo_1.angle = 180
 time.sleep(test_delay)
 
-print("RobotFriend_simpletest_2019-12-10_v08.py")
+print("RobotFriend_simpletest_2019-12-11_v09.py")
 print("----------------------------------------")
 
 t1 = time.time()
@@ -136,7 +143,7 @@ while True:
 
     print("----------")
     panel.pixels.fill([0, 0, 0])
-    if has_joystick:
+    if panel.has_joystick:
         print("Joystick:", panel.joystick)  # if PyGamer
 
     # print(panel.button)  # to show state of buttons
