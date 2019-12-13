@@ -6,6 +6,7 @@ import time
 import random as rand
 from cedargrove_pypanel import *
 
+for i in range(0,3): print(" ")
 if panel.has_joystick: print("Joystick found")  # if PyGamer
 else: print("No joystick")
 
