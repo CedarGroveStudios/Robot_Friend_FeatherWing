@@ -15,7 +15,7 @@ config = {
 		'test'     : 'ssd1306.fill(0)'
 		},
 
-	'crickit' : {
+	'crickit' : {  # needs to be last I2C device; locks bus
 		'name'     : 'Crickit',
 		'desc'     : 'Crickit Wing',
 		'import'   : 'from adafruit_crickit import crickit',
