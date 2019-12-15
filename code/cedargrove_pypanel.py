@@ -1,5 +1,5 @@
 # cedargrove_pypanel.py
-# Cedar Grove Studios 2019-12-14 v01
+# Cedar Grove Studios 2019-12-15 v02
 # uses revised adafruit_pybadger and adafruit_crickit
 # configuration dictionary is contained in 'pypanel_config.py'
 
@@ -10,20 +10,16 @@ i2c = board.I2C()  # establish i2C instance for Stemma devices
 stemma = []  # clear the list
 
 try:
-    from pypanel_config import *
+    from pypanel_config import config
 except:
     raise RuntimeError("Missing pypanel_config.py file")
 
-st = []  # temporary list of possible devices
-for i in config.keys():
-    st.append(i)
-
-for j in range(0, len(st)):
+for device in config.keys():
     try:
-        exec(config[st[j]]['import'])
-        exec(config[st[j]]['instance'])
-        exec(config[st[j]]['test'])
-        stemma.append((st[j], config[st[j]]['name'], config[st[j]]['desc']))
+        exec(config[device]['import'])
+        exec(config[device]['instance'])
+        exec(config[device]['test'])
+        stemma.append((device, config[device]['name'], config[device]['desc']))
     except:
         pass
 
