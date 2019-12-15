@@ -1,7 +1,7 @@
 # cedargrove_pypanel.py
 # Cedar Grove Studios 2019-12-15 v02
 # uses revised adafruit_pybadger and adafruit_crickit
-# configuration dictionary is contained in 'pypanel_config.py'
+# configuration dictionary is contained in 'pypanel_device.py'
 
 import board
 i2c = board.I2C()  # establish i2C instance for Stemma devices
@@ -10,16 +10,16 @@ i2c = board.I2C()  # establish i2C instance for Stemma devices
 stemma = []  # clear the list
 
 try:
-    from pypanel_config import config
+    from pypanel_device import catalog
 except:
-    raise RuntimeError("Missing pypanel_config.py file")
+    raise RuntimeError("pypanel_device.py file error")
 
-for device in config.keys():
+for device in catalog.keys():
     try:
-        exec(config[device]['import'])
-        exec(config[device]['instance'])
-        exec(config[device]['test'])
-        stemma.append((device, config[device]['name'], config[device]['desc']))
+        exec(catalog[device]['import'])
+        exec(catalog[device]['instance'])
+        exec(catalog[device]['test'])
+        stemma.append((device, catalog[device]['name'], catalog[device]['desc']))
     except:
         pass
 
@@ -27,6 +27,7 @@ for device in config.keys():
 from adafruit_pybadger import PyBadger
 panel = PyBadger(pixels_brightness=0.01)
 
+# look for PyGamer's joystick
 if hasattr(board, "JOYSTICK_X"):
     panel.has_joystick = True
 else: panel.has_joystick = False

@@ -1,4 +1,4 @@
-config = {
+catalog = {
 	'mcp4725' : {
 		'name'     : 'MCP4725',
 		'desc'     : '12-bit DAC',
@@ -25,7 +25,7 @@ config = {
 }
 
 """
-	class : {
+	device : {
 		'name'     : name,
 		'desc'     : description,
 		'import'   : import string to execute,
