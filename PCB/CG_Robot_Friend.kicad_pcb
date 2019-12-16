@@ -343,7 +343,7 @@
     (pad 28 thru_hole circle (at 19.05 -12.7) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 3 /SDA))
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Adafruit_CAD_Parts-master/3093 Crickit CPX/3093 Crickit CPX.step"
-      (offset (xyz 1 0 -44))
+      (offset (xyz 1 0 -34))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -358,12 +358,12 @@
       (rotate (xyz 0 180 0))
     )
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Socket_Strips.3dshapes/Socket_Strip_Straight_2x12_Pitch2.54mm.wrl"
-      (offset (xyz 5 11.5 -42))
+      (offset (xyz 5 11.5 -32))
       (scale (xyz 1 1 0.4))
       (rotate (xyz 0 0 0))
     )
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Socket_Strips.3dshapes/Socket_Strip_Straight_2x16_Pitch2.54mm.wrl"
-      (offset (xyz 0 -11 -42))
+      (offset (xyz 0 -11 -32))
       (scale (xyz 1 1 0.4))
       (rotate (xyz 0 0 0))
     )

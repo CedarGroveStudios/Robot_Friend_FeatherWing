@@ -343,7 +343,7 @@
     (pad 28 thru_hole circle (at 19.05 -12.7) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 3 /SDA))
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Adafruit_CAD_Parts-master/3093 Crickit CPX/3093 Crickit CPX.step"
-      (offset (xyz 1 0 -11))
+      (offset (xyz 1 0 -44))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -535,7 +535,7 @@
     (pad 1 thru_hole circle (at -19.05 -10.16) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 6 /~RESET))
     (model "C:/Program Files/KiCad/share/kicad/packages3d/Adafruit_CAD_Parts-master/4200 PyBadge/4200 PyBadge.step"
-      (offset (xyz 28.5 0 -44))
+      (offset (xyz 28.5 0 -34))
       (scale (xyz 1 1 1))
       (rotate (xyz 90 180 -90))
     )
@@ -548,6 +548,11 @@
       (offset (xyz 5 10 -2))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 180 0))
+    )
+    (model "C:/Program Files/KiCad/share/kicad/packages3d/Adafruit_CAD_Parts-master/4242 Adafruit PyGamer/Adafruit PyGamer.step"
+      (offset (xyz 3 0 -51))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 -90))
     )
   )
 
