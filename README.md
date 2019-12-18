@@ -19,7 +19,7 @@ Since the reverse-biased "feature" of the PB/PG's internal regulator is not docu
 
 Intrinsic MOSFET Diode Discussion: https://www.digikey.com/en/articles/techzone/2016/sep/the-significance-of-the-intrinsic-body-diodes-inside-mosfets
 
-OSH Park project: <a href="https://oshpark.com/shared_projects/N1lNaemv"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
+OSH Park project: <a href="https://oshpark.com/shared_projects/DxtJkU02"><img src="https://oshpark.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
 ![Image of Module](https://github.com/CedarGroveStudios/Robot_Friend_FeatherWing/blob/master/photos%20and%20graphics/Robot_Friend_glam_wide.png)
 
