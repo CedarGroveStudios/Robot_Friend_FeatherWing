@@ -15,6 +15,14 @@ catalog = {
 		'test'     : 'ssd1306.fill(0)'
 		},
 
+	'ds3231' : {
+		'name'     : 'DS3231',
+		'desc'     : 'RTC Wing',
+		'import'   : 'import adafruit_ds3231',
+		'instance' : 'ds3231 = adafruit_ds3231.DS3231(i2c)',
+		'test'     : 'ds3231.datetime'
+		},
+
 	'crickit' : {  # needs to be last I2C device; locks bus
 		'name'     : 'Crickit',
 		'desc'     : 'Crickit Wing',

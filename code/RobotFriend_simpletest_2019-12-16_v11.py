@@ -1,4 +1,4 @@
-# RobotFriend_simpletest_2019-12-14_v10.py
+# RobotFriend_simpletest_2019-12-16_v11.py
 # uses revised adafruit_pybadger and adafruit_crickit
 # uses cedargrove_pypanel to abstract Crickit and PyBadge/PyGamer
 
@@ -93,26 +93,55 @@ hilbert2(6, "a", 90, 4, turtle)
 
 time.sleep(test_delay)
 
-# Wave file to speaker test
-panel.play_tone(440, 0.25)
-time.sleep(0.25)
-panel.play_file("rimshot.wav")
-time.sleep(test_delay)
+# Robot-turtle helpers
+def robot_forward(dist=0, speed=1.0):
+    turtle.forward(dist * 10)
+    crickit.dc_motor_1.throttle = speed
+    crickit.dc_motor_2.throttle = speed
+    time.sleep(dist)
+    crickit.dc_motor_1.throttle = 0
+    crickit.dc_motor_2.throttle = 0
 
-# DC motor test
-# turn off motors
-crickit.dc_motor_1.throttle = 0.0
-crickit.dc_motor_2.throttle = 0.0
-vel = 1.0
-crickit.dc_motor_1.throttle = vel
-crickit.dc_motor_2.throttle = vel
+def robot_backward(dist=0, speed=1.0):
+    turtle.backward(dist * 10)
+    crickit.dc_motor_1.throttle = speed * -1.0
+    crickit.dc_motor_2.throttle = speed * -1.0
+    time.sleep(dist)
+    crickit.dc_motor_1.throttle = 0
+    crickit.dc_motor_2.throttle = 0
+
+def robot_left(dist=0, speed=1.0):
+    turtle.left(90)
+    crickit.dc_motor_1.throttle = speed * -1.0
+    crickit.dc_motor_2.throttle = speed
+    time.sleep(0.25)
+    crickit.dc_motor_1.throttle = 0
+    crickit.dc_motor_2.throttle = 0
+    robot_forward(dist, speed)
+
+def robot_right(dist=0, speed=1.0):
+    turtle.right(90)
+    crickit.dc_motor_1.throttle = speed
+    crickit.dc_motor_2.throttle = speed * -1.0
+    time.sleep(0.25)
+    crickit.dc_motor_1.throttle = 0
+    crickit.dc_motor_2.throttle = 0
+    robot_forward(dist, speed)
+
+turtle.penup()
+turtle.clear()
+turtle.goto(0, 0)
 time.sleep(test_delay)
-crickit.dc_motor_1.throttle = -1 * vel
-crickit.dc_motor_2.throttle = -1 * vel
-time.sleep(test_delay)
-crickit.dc_motor_1.throttle = 0.0
-crickit.dc_motor_2.throttle = 0.0
-time.sleep(test_delay)
+turtle.pendown()
+robot_forward(1)
+robot_backward(1)
+robot_left(1)
+robot_right(1)
+
+# test of solenoid on drive_1
+crickit.feather_drive_1.fraction = 1.0
+time.sleep(0.1)
+crickit.feather_drive_1.fraction = 0.0
 
 # test of Servo 1
 crickit.servo_1.angle = 90
@@ -122,8 +151,14 @@ time.sleep(test_delay)
 crickit.servo_1.angle = 180
 time.sleep(test_delay)
 
-print("RobotFriend_simpletest_2019-12-14_v10.py")
+print("RobotFriend_simpletest_2019-12-16_v11.py")
 print("----------------------------------------")
+
+# Wave file to speaker test
+panel.play_tone(440, 0.25)
+time.sleep(0.25)
+panel.play_file("rimshot.wav")
+time.sleep(test_delay)
 
 t1 = time.time()
 select_state = True
