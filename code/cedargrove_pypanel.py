@@ -24,8 +24,9 @@ for device in catalog.keys():
         pass
 
 # establish PyBadger instance
-from adafruit_pybadger import PyBadger
-panel = PyBadger(pixels_brightness=0.01)
+from adafruit_pybadger import pybadger as panel
+panel.brightness = 0.5
+panel.pixels[0]=(5, 0, 5)
 
 # look for PyGamer's joystick
 if hasattr(board, "JOYSTICK_X"):
